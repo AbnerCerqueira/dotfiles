@@ -1,0 +1,113 @@
+{
+  "layer": "top",
+  "position": "top",
+  "margin-top": 13,
+  "modules-left": [
+    "custom/spotify",
+    "idle_inhibitor"
+  ],
+  "modules-center": [
+    "hyprland/workspaces"
+  ],
+  "modules-right": [
+    "keyboard-state",
+    "tray",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "clock"
+  ],
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "format-icons": {
+      "1": "1",
+      "2": "2",
+      "3": "3",
+      "4": "4",
+      "5": "5",
+      "6": "6",
+      "7": "7",
+      "8": "8",
+      "9": "9",
+      "10": "10"
+    },
+    "sort-by-number": true
+  },
+  "hyprland/window": {
+    "max-length": 50
+  },
+  "custom/spotify": {
+    "exec": "/sbin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
+    "format": "{}",
+    "return-type": "json",
+    "on-click": "playerctl --player=spotify play-pause",
+    "on-click-right": "playerctl next --player spotify",
+    "on-click-middle": "playerctl previous --player spotify",
+    "max-length": 35,
+    "escape": true,
+    "tooltip": true
+  },
+  "idle_inhibitor": {
+    "format": "{icon} ",
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+  "keyboard-state": {
+    "capslock": true,
+    "format": {
+      "capslock": "{icon}"
+    },
+    "format-icons": {
+      "locked": "󰪛",
+      "unlocked": " "
+    }
+  },
+  "tray": {
+    "icon-size": 21,
+    "rotate": 0,
+    "spacing": 10
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_battery_percentage}%",
+    "on-click": "blueman-manager",
+    "max-length": 20
+  },
+  "pulseaudio": {
+    "format": "{volume}% {icon} {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "scroll-step": 5,
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "{volume}% ",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "headset": "",
+      "phone": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol"
+  },
+  "network": {
+    "interface": "enp9s0",
+    "format": "{ifname}",
+    "format-wifi": " ({signalStrength}%)",
+    "format-ethernet": " ",
+    "format-disconnected": "󰤭  |  disconnected",
+    "max-length": 50
+  },
+  "clock": {
+    "timezone": "America/Sao_Paulo",
+    "format": "{:%H:%M}",
+    "format-alt": "{:%H:%M - %d/%m/%Y}"
+  }
+}
