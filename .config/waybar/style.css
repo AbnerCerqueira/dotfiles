@@ -1,81 +1,76 @@
-@define-color yellow #FAA916;
-@define-color blue #24B3FF;
-@define-color green #a6e3a1;
-@define-color white #ffffff;
-@define-color red #D33E40;
-@define-color bg #202020;
-@define-color selected_bg #303030;
+@define-color fg #E0E0E0;
+@define-color fg-inactive #4D4D4D;
+@define-color bg #0F0F0F;
 
 * {
-    font-family: 'JetBrains Mono Nerd Font';
-    font-weight: bold;
-    font-size: 15px;
-    border-radius: 10px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 15px;
+  margin: 0;
+  padding: 0;
 }
 
-button {
-    box-shadow: inset 0 -3px transparent;
-    border: none;
-    border-radius: 0;
-}
-
-button:hover {
-    background: inherit;
-    color: @yellow;
-}
-
-#window {
-    padding: 0 4px;
-}
-
-window#waybar {
-    background-color: transparent;
-}
-
-#workspaces {
-    background-color: @bg;
+#waybar {
+  color: @fg;
+  background-color: @bg;
+  border-radius: 10px;
 }
 
 #workspaces button {
-    padding: 4px 15px;
-    border-radius: 10px;
-    transition: all 0.3s ease-in-out;
+  font-size: 5px;
+  color: @fg;
+  padding: 7px 13px;
 }
 
 #workspaces button.active {
-    background-color: @selected_bg;
-    color: @yellow;
-    /* transition: 0.2s ease-out; */
-    transition: all 0.3s ease-in-out;
-    opacity:1.0;
+  border: 3px solid @fg;
+  border-radius: 10px;
+  padding: 4px 10px;
+  font-size: 5px;
+  color: @fg;
+  background-color: transparent;
 }
 
-#workspaces button.urgent {
-    background-color: #eb4d4b;
+#workspaces button.empty {
+  color: @fg-inactive;
+}
+
+#workspaces button:hover {
+  border: 1px solid @fg;
+  border-radius: 10px;
+}
+
+button {
+  box-shadow: inset 0 -3px transparent;
+  border: none;
+  border-radius: 0;
+}
+
+button:hover {
+  background: inherit;
+  color: @yellow;
+}
+
+#window {
+  padding: 0 4px;
+}
+
+#workspaces {
+  background-color: @bg;
 }
 
 .modules-left {
-    margin-left: 12px;    
+  margin-left: 20px;
 }
 
 .modules-right {
-    margin-right: 12px;    
+  margin-right: 20px;
 }
 
-#clock,
-#custom-spotify,
 #idle_inhibitor,
-#keyboard-state label.locked,
 #tray,
 #network,
-#bluetooth,
-#pulseaudio {
-    margin: 0 3px;
-    padding: 4px 15px;
-    color: @white;
-    background-color: @bg;
-}
-
-#custom-spotify {
-    color: @green;
+#pulseaudio,
+#custom-notification {
+  padding: 0 15px;
 }

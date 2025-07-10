@@ -1,21 +1,21 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 13,
+  "margin-top": 6,
+  "margin-right": 6,
+  "margin-left": 6,
   "modules-left": [
-    "custom/spotify",
-    "idle_inhibitor"
+    "clock"
   ],
   "modules-center": [
     "hyprland/workspaces"
   ],
   "modules-right": [
-    "keyboard-state",
     "tray",
+    "idle_inhibitor",
     "network",
-    "bluetooth",
     "pulseaudio",
-    "clock"
+    "custom/notification"
   ],
   "hyprland/workspaces": {
     "format": "{icon}",
@@ -37,17 +37,6 @@
   "hyprland/window": {
     "max-length": 50
   },
-  "custom/spotify": {
-    "exec": "/sbin/python3 ~/.config/waybar/mediaplayer.py --player spotify",
-    "format": "{}",
-    "return-type": "json",
-    "on-click": "playerctl --player=spotify play-pause",
-    "on-click-right": "playerctl next --player spotify",
-    "on-click-middle": "playerctl previous --player spotify",
-    "max-length": 35,
-    "escape": true,
-    "tooltip": true
-  },
   "idle_inhibitor": {
     "format": "{icon} ",
     "format-icons": {
@@ -55,27 +44,10 @@
       "deactivated": ""
     }
   },
-  "keyboard-state": {
-    "capslock": true,
-    "format": {
-      "capslock": "{icon}"
-    },
-    "format-icons": {
-      "locked": "󰪛",
-      "unlocked": " "
-    }
-  },
   "tray": {
-    "icon-size": 21,
+    "icon-size": 18,
     "rotate": 0,
-    "spacing": 10
-  },
-  "bluetooth": {
-    "format": " {status}",
-    "format-connected": " {device_alias}",
-    "format-connected-battery": " {device_battery_percentage}%",
-    "on-click": "blueman-manager",
-    "max-length": 20
+    "spacing": 25
   },
   "pulseaudio": {
     "format": "{volume}% {icon} {format_source}",
@@ -103,11 +75,32 @@
     "format-wifi": " ({signalStrength}%)",
     "format-ethernet": " ",
     "format-disconnected": "󰤭  |  disconnected",
-    "max-length": 50
+    "max-length": 50,
+    "on-click": "nm-connection-editor"
   },
   "clock": {
     "timezone": "America/Sao_Paulo",
-    "format": "{:%H:%M}",
-    "format-alt": "{:%H:%M - %d/%m/%Y}"
+    "format": "{:%H:%M - %d/%m/%Y}",
+    "format-alt": "{:%H:%M}"
+  },
+  "custom/notification": {
+    "tooltip": false,
+    "format": "{icon}",
+    "format-icons": {
+      "notification": "󰵙<span foreground='red'><sup></sup></span>",
+      "none": "󰂚",
+      "dnd-notification": "󰂛<span foreground='red'><sup></sup></span>",
+      "dnd-none": "󰂛",
+      "inhibited-notification": "󰵙<span foreground='red'><sup></sup></span>",
+      "inhibited-none": "󰵙",
+      "dnd-inhibited-notification": "󰂛<span foreground='red'><sup></sup></span>",
+      "dnd-inhibited-none": "󰂛"
+    },
+    "return-type": "json",
+    "exec-if": "which swaync-client",
+    "exec": "swaync-client -swb",
+    "on-click": "swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true
   }
 }
