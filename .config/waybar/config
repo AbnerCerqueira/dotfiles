@@ -14,6 +14,7 @@
     "tray",
     "idle_inhibitor",
     "network",
+    "bluetooth",
     "pulseaudio",
     "custom/notification"
   ],
@@ -43,6 +44,16 @@
       "activated": "",
       "deactivated": ""
     }
+  },
+  "bluetooth": {
+    "format": " {status}",
+    "format-disabled": "",
+    "format-off": "",
+    "format-no-controller": "",
+    "format-connected": " {device_alias}",
+    "format-connected-battery": " {device_battery_percentage}%",
+    "on-click": "blueman-manager",
+    "max-length": 20
   },
   "tray": {
     "icon-size": 18,
