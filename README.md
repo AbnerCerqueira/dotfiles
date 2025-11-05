@@ -1,6 +1,6 @@
 # my dotfiles
 
-|  |  |
+| component | tool |
 | --- | --- |
 | **operating system** | [arch linux](https://archlinux.org/) |
 | **wayland compositor** | [hyprland](https://hypr.land/) |
@@ -12,6 +12,4 @@
 | **system info tool** | [fastfetch](https://github.com/fastfetch-cli/fastfetch) |
 ---
 
-simples e funcional
-
-![img1](./assets/2025-10-25-193203_hyprshot.png)
+![img1](./assets/2025-11-04-234648_hyprshot.png)
