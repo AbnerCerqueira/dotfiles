@@ -102,9 +102,11 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# prompt_context(){}
+prompt_context(){}
 
 alias dotfiles="code ~/dotfiles"
 
 export LC_CTYPE=pt_BR.UTF-8
 export TERM=xterm-256color
+
+. /usr/share/nvm/init-nvm.sh
