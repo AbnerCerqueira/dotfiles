@@ -5,7 +5,8 @@
   "margin-right": 6,
   "margin-left": 6,
   "modules-left": [
-    "clock"
+    "clock",
+    "hyprland/language"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -113,5 +114,10 @@
     "on-click": "swaync-client -t -sw",
     "on-click-right": "swaync-client -d -sw",
     "escape": true
+  },
+  "hyprland/language": {
+    "format": "keyboard layout - {}",
+    "format-br": "BR",
+    "format-en": "US"
   }
 }
