@@ -35,9 +35,6 @@ fi
 
 echo "selecionado $image_path"
 
-hyprctl hyprpaper unload all
-hyprctl hyprpaper preload "$image_path"
-
 for mon in $(hyprctl monitors | awk '/Monitor/ {print $2}'); do
     hyprctl hyprpaper wallpaper "$mon, $image_path"
 done
