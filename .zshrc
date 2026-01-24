@@ -110,3 +110,10 @@ export LC_CTYPE=pt_BR.UTF-8
 export TERM=xterm-256color
 
 . /usr/share/nvm/init-nvm.sh
+
+# bun completions
+[ -s "/home/pessoal/.bun/_bun" ] && source "/home/pessoal/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
