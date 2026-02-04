@@ -6,7 +6,8 @@
   "margin-left": 6,
   "modules-left": [
     "clock",
-    "hyprland/language"
+    "hyprland/language",
+    "custom/spotify"
   ],
   "modules-center": [
     "hyprland/workspaces"
@@ -93,7 +94,27 @@
   "clock": {
     "timezone": "America/Sao_Paulo",
     "format": "{:%H:%M - %d/%m/%Y}",
-    "format-alt": "{:%H:%M}"
+    "format-alt": "{:%H:%M}",
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "mode": "month",
+      "mode-mon-col": 4,
+      "weeks-pos": "right",
+      "on-scroll": 1,
+      "format": {
+        "months": "<span color='#E0E0E0'><b>{}</b></span>",
+        "days": "<span color='#E0E0E0'>{}</span>",
+        "weeks": "<span color='#4D4D4D'>{}</span>",
+        "weekdays": "<span color='#E0E0E0'><b>{}</b></span>",
+        "today": "<span color='#0F0F0F' background='#E0E0E0'><b>{}</b></span>"
+      }
+    },
+    "actions": {
+      "on-click-right": "mode",
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+      "on-click": "shift_reset"
+    }
   },
   "custom/notification": {
     "tooltip": false,
@@ -119,5 +140,13 @@
     "format": "keyboard layout - {}",
     "format-br": "BR",
     "format-en": "US"
+  },
+  "custom/spotify": {
+    "exec": "bun ~/.config/waybar/spotify.ts",
+    "return-type": "json",
+    "interval": 2,
+    "on-click": "bun ~/.config/waybar/spotify.ts --action toggle",
+    "on-click-right": "bun ~/.config/waybar/spotify.ts --action next",
+    "on-click-middle": "bun ~/.config/waybar/spotify.ts --action previous"
   }
 }
