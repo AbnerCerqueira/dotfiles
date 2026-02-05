@@ -25,6 +25,7 @@ const selectedFilePath = join(wallpaperPath, selectedFile);
 Promise.all([
   updateHyprpaper(selectedFilePath),
   updateHyprlock(selectedFilePath),
+  updateThemes(selectedFilePath),
 ]);
 
 async function getAvailableWallpapers() {
@@ -44,16 +45,7 @@ async function getAvailableWallpapers() {
 }
 
 async function updateHyprpaper(selectedFilePath: string) {
-  const monitors = (
-    await $`hyprctl monitors | awk '/Monitor/ {print $2}'`.text()
-  )
-    .trim()
-    .split('\n')
-    .filter(Boolean);
-
-  for (const monitor of monitors) {
-    await $`hyprctl hyprpaper wallpaper "${monitor}, ${selectedFilePath}"`;
-  }
+  await $`hyprctl hyprpaper wallpaper ', ${selectedFilePath}'`;
 
   await updateConfigFile(hyprpaperPath, selectedFilePath, 'wallpaper');
 }
@@ -100,4 +92,8 @@ function findPathKey(parentKeyIndex: number, lines: string[]) {
   }
 
   return pathIndex;
+}
+
+async function updateThemes(selectedFilePath: string) {
+  await $`matugen --config ${PATHS.MATUGEN} image ${selectedFilePath}`;
 }

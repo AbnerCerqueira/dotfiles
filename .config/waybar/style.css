@@ -1,6 +1,4 @@
-@define-color fg #E0E0E0;
-@define-color fg-inactive #4D4D4D;
-@define-color bg #0F0F0F;
+@import 'colors-matugen.css';
 
 * {
   font-family: "JetBrainsMono Nerd Font";
@@ -11,29 +9,29 @@
 }
 
 #waybar {
-  color: @fg;
-  background-color: @bg;
+  color: @foreground;
+  background-color: @background;
   border-radius: 10px;
 }
 
 #workspaces button {
   font-size: 5px;
-  color: @fg;
+  color: @foreground;
   padding: 5px 10px;
   margin: 0 2px;
 }
 
 #workspaces button.active {
-  color: @bg;
-  background-color: @fg;
+  color: @background;
+  background-color: @foreground;
 }
 
 #workspaces button.empty {
-  color: @fg-inactive;
+  color: @foreground-inactive;
 }
 
 #workspaces button.urgent {
-  background-color: #eb4d4b;
+  background-color: @error;
 }
 
 #window {
@@ -41,7 +39,7 @@
 }
 
 #workspaces {
-  background-color: @bg;
+  background-color: @background;
 }
 
 .modules-left {
@@ -68,7 +66,7 @@
 }
 
 #custom-spotify.paused {
-  color: @fg-inactive;
+  color: @foreground-inactive;
 }
 
 #clock {
@@ -76,8 +74,8 @@
 }
 
 tooltip {
-  background-color: @bg;
-  border: 1px solid @fg-inactive;
+  background-color: @background;
+  border: 1px solid @foreground-inactive;
   border-radius: 10px;
   padding: 8px;
   margin: 6px;

@@ -19,4 +19,5 @@ export const PATHS = {
     LOCK: join(HYPR_DIR, 'hyprlock.conf'),
     PAPER: join(HYPR_DIR, 'hyprpaper.conf'),
   },
+  MATUGEN: join(DOTFILES_DIR, '.config', 'matugen', 'config.toml'),
 };

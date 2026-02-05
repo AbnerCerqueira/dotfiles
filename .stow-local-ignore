@@ -1,3 +1,8 @@
+README.md
 scripts
+assets
+node_modules
+bun.lock
+.gitattributes
 .gitignore
 .git
