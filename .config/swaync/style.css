@@ -21,7 +21,7 @@ slider {
 
 .widget-volume {
   padding-top: 1rem;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .widget-volume label {
@@ -31,17 +31,17 @@ slider {
 
 .widget-volume trough {
   background-color: @inverse-foreground;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .widget-volume trough highlight {
   background-color: @foreground;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .widget-dnd > switch slider {
   background-color: @foreground;
-  border-radius: 10px;
+  border-radius: 5px;
   border: 1px solid @foreground;
 }
 
@@ -49,14 +49,14 @@ slider {
 .floating-notifications.background .notification-row .notification-background {
   background-color: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 9px;
   padding: 0;
 }
 
 .floating-notifications .notification {
   padding: 7px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .notification.critical {
@@ -75,13 +75,13 @@ slider {
 
 .notification > *:last-child > * {
   min-height: 3.4em;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .notification-action {
   background-color: @background;
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 3px;
 }
 
@@ -90,7 +90,7 @@ slider {
   padding: 2px;
   background-color: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .close-button:hover {
@@ -102,7 +102,7 @@ slider {
 .control-center {
   background-color: @background;
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 14px;
   margin: 9px;
 }
@@ -115,7 +115,7 @@ slider {
 .control-center .widget-title button {
   background-color: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: inset 0 0 0 1px @foreground;
   padding: 7px;
 }
@@ -128,14 +128,14 @@ slider {
 .control-center .notification-background {
   background-color: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
   margin-top: 14px;
   box-shadow: inset 0 0 0 1px @background;
 }
 
 .control-center .notification {
   padding: 7px;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .control-center .notification.critical {
@@ -148,7 +148,7 @@ slider {
 
 .control-center .notification > *:last-child > * {
   min-height: 3.4em;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .control-center .close-button {
@@ -156,14 +156,14 @@ slider {
   padding: 2px;
   background-color: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .control-center .close-button:hover,
 .control-center .notification-background:hover {
   background-color: @inverse-foreground;
   color: @foreground;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 /* === Outros widgets === */
@@ -175,13 +175,13 @@ slider {
 .widget-dnd > switch {
   background: @inverse-foreground;
   border: 1px solid @background;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .widget-mpris .widget-mpris-player {
   background: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 15px;
   margin-top: 30px;
 }
@@ -197,7 +197,7 @@ slider {
 .widget-buttons-grid > flowbox > flowboxchild > button {
   background: @foreground;
   color: @background;
-  border-radius: 10px;
+  border-radius: 5px;
   margin: 4px;
   font-size: 50px;
 }
@@ -209,7 +209,7 @@ slider {
 
 /* === Barra de progresso de notificação === */
 .notification progress {
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .notification.critical progress {
