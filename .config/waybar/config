@@ -1,20 +1,20 @@
 {
   "layer": "top",
   "position": "top",
-  "margin-top": 6,
-  "margin-right": 6,
-  "margin-left": 6,
+  // "margin-top": 6,
+  // "margin-right": 6,
+  // "margin-left": 6,
   "modules-left": [
-    "clock",
-    "hyprland/language",
+    "hyprland/workspaces",
     "custom/spotify"
   ],
   "modules-center": [
-    "hyprland/workspaces"
+    "clock",
+    "idle_inhibitor",
+    "tray"
   ],
   "modules-right": [
-    "tray",
-    "idle_inhibitor",
+    "hyprland/language",
     "network",
     "bluetooth",
     "pulseaudio",
@@ -63,24 +63,17 @@
     "spacing": 25
   },
   "pulseaudio": {
-    "format": "{volume}% {icon} {format_source}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "scroll-step": 5,
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
-    "format-icons": {
-      "headphone": "",
-      "headset": "",
-      "phone": "",
-      "default": [
-        "",
-        "",
-        ""
-      ]
-    },
-    "on-click": "pavucontrol"
+  "format": "{volume}% {icon} {format_source}",
+  "format-bluetooth": "{volume}%  {format_source}",
+  "format-source": "{volume}% ",
+  "format-muted": "",
+  "format-icons": {
+    "headphone": "",
+    "headset": "",
+    "default": ["", ""]
+  },
+  "scroll-step": 5,
+  "on-click": "pavucontrol"
   },
   "network": {
     "interface": "enp9s0",
@@ -93,8 +86,8 @@
   },
   "clock": {
     "timezone": "America/Sao_Paulo",
-    "format": "{:%H:%M - %d/%m/%Y}",
-    "format-alt": "{:%H:%M}",
+    "format-alt": "{:%H:%M - %d/%m/%Y}",
+    "format": "{:%H:%M}",
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
       "mode": "month",
