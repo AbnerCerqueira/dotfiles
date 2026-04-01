@@ -95,5 +95,5 @@ function findPathKey(parentKeyIndex: number, lines: string[]) {
 }
 
 async function updateThemes(selectedFilePath: string) {
-  await $`matugen --config ${PATHS.MATUGEN} image ${selectedFilePath}`;
+  await $`matugen --config ${PATHS.MATUGEN} --source-color-index 0 image ${selectedFilePath}`;
 }
