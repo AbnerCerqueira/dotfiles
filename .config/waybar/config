@@ -60,7 +60,7 @@
   "tray": {
     "icon-size": 18,
     "rotate": 0,
-    "spacing": 25
+    "spacing": 20
   },
   "pulseaudio": {
   "format": "{volume}% {icon} {format_source}",
