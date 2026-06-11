@@ -3,7 +3,7 @@
 [templates.kitty]
 input_path='~/dotfiles/.config/matugen/templates/dark/kitty.conf'
 output_path='~/dotfiles/.config/kitty/themes/matugen.conf'
-post_hook = 'kitty +kitten themes --reload-in=all matugen'
+post_hook = 'cp ~/dotfiles/.config/kitty/themes/matugen.conf ~/.config/kitty/dark-theme.auto.conf && kitty +kitten themes --reload-in=all matugen'
 
 [templates.waybar]
 input_path='~/dotfiles/.config/matugen/templates/dark/waybar.css'
