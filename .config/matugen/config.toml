@@ -19,9 +19,13 @@ input_path='~/dotfiles/.config/matugen/templates/dark/swaync.css'
 output_path='~/dotfiles/.config/swaync/colors-matugen.css'
 post_hook = 'swaync-client --reload-css'
 
-[templates.hyprland]
+[templates.hyprland_conf]
 input_path='~/dotfiles/.config/matugen/templates/dark/hyprland.conf'
 output_path='~/dotfiles/.config/hypr/themes/colors-matugen.conf'
+
+[templates.hyprland_lua]
+input_path='~/dotfiles/.config/matugen/templates/dark/hyprland.lua'
+output_path='~/dotfiles/.config/hypr/themes/colors-matugen.lua'
 
 [templates.btop]
 input_path = '~/dotfiles/.config/matugen/templates/dark/btop.theme'

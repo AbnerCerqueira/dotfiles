@@ -22,7 +22,7 @@ if (!selectedFile) {
 }
 const selectedFilePath = join(wallpaperPath, selectedFile);
 
-Promise.all([
+await Promise.all([
   updateHyprpaper(selectedFilePath),
   updateHyprlock(selectedFilePath),
   updateThemes(selectedFilePath),
@@ -71,7 +71,7 @@ async function updateConfigFile(
 
   lines[pathIndex] = `    path = ${selectedFilePath}`;
 
-  Bun.write(configFilePath, lines.join('\n'));
+  await Bun.write(configFilePath, lines.join('\n'));
 }
 
 function findPathKey(parentKeyIndex: number, lines: string[]) {
