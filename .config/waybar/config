@@ -132,11 +132,11 @@
     "format-en": "US"
   },
   "custom/spotify": {
-    "exec": "bun ~/.config/waybar/spotify.ts",
+    "exec": "lua ~/.config/waybar/spotify.lua",
     "return-type": "json",
     "interval": 2,
-    "on-click": "bun ~/.config/waybar/spotify.ts --action toggle",
-    "on-click-right": "bun ~/.config/waybar/spotify.ts --action next",
-    "on-click-middle": "bun ~/.config/waybar/spotify.ts --action previous"
+    "on-click": "lua ~/.config/waybar/spotify.lua --action toggle",
+    "on-click-right": "lua ~/.config/waybar/spotify.lua --action next",
+    "on-click-middle": "lua ~/.config/waybar/spotify.lua --action previous"
   }
 }
